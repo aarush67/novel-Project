@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrift by Tanya Guerrero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(180deg, #0A1D56 0%, #38B6FF 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        header {
+            text-align: center;
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5em;
+            color: #FF6F61;
+            text-shadow: 0 0 20px rgba(255, 111, 97, 0.7);
+            animation: fadeInDown 2s ease-out;
+        }
+        header p {
+            font-size: 1.5em;
+            color: #F4E4BC;
+            animation: fadeIn 3s ease-in;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #FF6F61;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+        }
+        p {
+            font-size: 1.1em;
+            color: #F4E4BC;
+        }
+        .character {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .character:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 111, 97, 0.3);
+        }
+        .wave-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/water.png') repeat-x;
+            opacity: 0.6;
+            animation: waveMove 15s infinite linear;
+        }
+        .wave:nth-child(2) {
+            opacity: 0.4;
+            animation: waveMoveReverse 20s infinite linear;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes waveMoveReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 3em; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Adrift</h1>
+        <p>Authored by Tanya Guerrero</p>
+    </header>
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <p>Adrift is a captivating novel that explores the lives of two cousins, Coral and Isa, who share a mutual connection. Residing on Pebble Island, their bond is tested when Coral’s family embarks on a sailing expedition in Indonesia. Disaster strikes as an earthquake unleashes a colossal tidal wave, sinking their boat. Coral finds herself marooned on a deserted island with only her loyal dog, Bambi, for company. Despite her sorrow over losing her parents, she adapts to her harsh surroundings. Simultaneously, Isa remains on Pebble Island, steadfast in her belief that Coral survives. Narrated through their alternating perspectives, this tale highlights resilience and devotion.</p>
+    </section>
+
+    <section id="characters">
+        <h2>Main Characters</h2>
+        <div class="character">
+            <p><strong>Coral Bituin-Rousseau:</strong> At 13 years old, Coral exemplifies courage. After her family’s boat is destroyed, she becomes stranded on an isolated island with Bambi. She demonstrates ingenuity by mastering survival skills, such as fishing and constructing shelter, all while grappling with the tragic loss of her parents.</p>
+        </div>
+        <div class="character">
+            <p><strong>Isa Bituin-Rousseau:</strong> Twelve-year-old Isa, Coral’s cousin, embodies unwavering hope. Remaining on Pebble Island, she refuses to accept Coral’s demise, diligently composing letters and advocating for continued search efforts to reunite with her beloved cousin.</p>
+        </div>
+        <div class="character">
+            <p><strong>Bambi:</strong> A devoted canine companion, Bambi survives the shipwreck alongside Coral. His presence proves invaluable, assisting in foraging for sustenance and providing emotional support during their isolating ordeal.</p>
+        </div>
+    </section>
+
+    <section id="plot">
+        <h2>Plot</h2>
+        <p>Coral and Isa, raised as inseparable companions on Pebble Island, face a heart-wrenching separation when Coral’s family sets sail, leaving Isa behind. Tragedy unfolds when an earthquake triggers a devastating tidal wave, obliterating their boat. Coral and Bambi wash ashore on an uninhabited island, where she must confront grief and hone survival techniques to endure. Meanwhile, Isa channels her optimism into written messages, urging others to persist in the search for Coral. The narrative alternates between Coral’s struggle for survival and Isa’s relentless faith, culminating in a moving reunion that underscores the strength of their bond.</p>
+    </section>
+
+    <section id="review">
+        <h2>My Review</h2>
+        <p>In my opinion, *Adrift* is an extraordinary novel that skillfully blends suspense and emotion. Coral’s journey of survival on the island is both thrilling and inspiring, while Isa’s determination adds a layer of heartfelt sincerity. Bambi, the loyal dog, enhances the story with his endearing presence, though I wish his role had been slightly expanded. I would rate this book a 9.9 out of 10, as it excels in nearly every aspect, delivering a compelling narrative that resonates deeply. I highly recommend it to anyone seeking a powerful and uplifting read.</p>
+    </section>
+
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+</body>
+</html>
